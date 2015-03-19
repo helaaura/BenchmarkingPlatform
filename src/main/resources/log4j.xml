@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="org.enis.benchmarkCreator">
+	<logger name="org.enis.BenchmarkCreator">
 		<level value="info" />
 	</logger>
 	
