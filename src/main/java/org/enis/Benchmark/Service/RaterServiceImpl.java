@@ -18,12 +18,12 @@ public class RaterServiceImpl implements RaterService {
 
 	  @Override
 	    @Transactional
-	public void addRater(Rater r) {
-		  this.raterDAO.addRater(r);
+	public void addRater(Rater rater) {
+		  this.raterDAO.addRater(rater);
 	}
 
 	@Override
-	public void updateRater(Rater r) {
+	public void updateRater(Rater rater) {
 		// TODO Auto-generated method stub
 		
 	}

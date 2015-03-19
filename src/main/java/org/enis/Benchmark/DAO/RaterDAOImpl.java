@@ -27,7 +27,7 @@ public class RaterDAOImpl  implements  RaterDAO {
 	}
 
 	@Override
-	public void updatePerson(Rater rater) {
+	public void updateRater(Rater rater) {
 		// TODO Auto-generated method stub
 		
 	}
