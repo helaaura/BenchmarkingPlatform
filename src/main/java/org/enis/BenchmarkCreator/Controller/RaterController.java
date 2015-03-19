@@ -1,7 +1,7 @@
-package org.enis.Benchmark.Controller;
+package org.enis.BenchmarkCreator.Controller;
 
-import org.enis.Benchmark.Model.Rater;
-import org.enis.Benchmark.Service.RaterService;
+import org.enis.BenchmarkCreator.Model.Rater;
+import org.enis.BenchmarkCreator.Service.RaterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

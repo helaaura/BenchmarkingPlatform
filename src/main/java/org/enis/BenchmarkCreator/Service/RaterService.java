@@ -1,8 +1,8 @@
-package org.enis.Benchmark.Service;
+package org.enis.BenchmarkCreator.Service;
 
 import java.util.List;
 
-import org.enis.Benchmark.Model.Rater;
+import org.enis.BenchmarkCreator.Model.Rater;
 
 public interface RaterService {
 	

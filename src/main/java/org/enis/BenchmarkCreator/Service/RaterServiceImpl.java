@@ -1,12 +1,15 @@
-package org.enis.Benchmark.Service;
+package org.enis.BenchmarkCreator.Service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
-import org.enis.Benchmark.DAO.RaterDAO;
-import org.enis.Benchmark.Model.Rater;
+
+
+
+import org.enis.BenchmarkCreator.DAO.RaterDAO;
+import org.enis.BenchmarkCreator.Model.Rater;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 @Service
 public class RaterServiceImpl implements RaterService {
 	

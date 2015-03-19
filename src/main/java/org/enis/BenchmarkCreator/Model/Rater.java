@@ -1,4 +1,4 @@
-package org.enis.Benchmark.Model;
+package org.enis.BenchmarkCreator.Model;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

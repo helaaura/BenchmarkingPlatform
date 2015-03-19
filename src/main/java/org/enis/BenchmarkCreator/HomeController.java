@@ -1,4 +1,4 @@
-package org.enis.benchmarkCreator;
+package org.enis.BenchmarkCreator;
 
 import java.text.DateFormat;
 import java.util.Date;

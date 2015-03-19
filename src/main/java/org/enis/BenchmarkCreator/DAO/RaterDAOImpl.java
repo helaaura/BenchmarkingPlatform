@@ -1,13 +1,14 @@
-package org.enis.Benchmark.DAO;
+package org.enis.BenchmarkCreator.DAO;
 
 import java.util.List;
 
-import org.enis.Benchmark.Model.Rater;
+import org.enis.BenchmarkCreator.Model.Rater;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public class RaterDAOImpl  implements  RaterDAO {
 	
 	 private static final Logger logger = LoggerFactory.getLogger(RaterDAOImpl.class);
