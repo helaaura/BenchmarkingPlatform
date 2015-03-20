@@ -37,25 +37,37 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
   };
 })
 
-.controller('SignUpCtrl', function($scope) {
+.controller('SignUpCtrl',['$scope','$http', function($scope,$http) {
     $scope.user = {
-      email: '',
-      firstName: '',
-      lastName: '' ,
-      login: '',
-      password: '',
-      confirm_password:'',
-    };
-    
-    $scope.addUser = function(user) {
-    	user.push(this.user);
-    };
-  
-   
-  })
+    	      email: 'email',
+    	      firstName: 'hela',
+    	      lastName: 'meg' ,
+    	      login: 'hela',
+    	      password: '123',
+    	      confirm_password:'123',
+    };    
+	$scope.submit = function() {
+		var rater = {
+				firstName : $scope.user.firstName,
+				lastName : $scope.user.lastName, 
+				email : $scope.user.email,
+				login : $scope.user.login,
+				password : $scope.user.password
+		};	
+		var res = $http.post('/benchmarkCreator/saverater_json', rater);
+		res.success(function(data, status, headers, config) {
+			$scope.message = data;
+		});
+		res.error(function(data, status, headers, config) {
+			alert( "failure message: " + JSON.stringify({data: data}));
+		});		
+	};
+ }])
   .config( function($mdThemingProvider){
     // Configure a dark theme with primary foreground yellow
     $mdThemingProvider.theme('docs-dark', 'default')
         .primaryPalette('yellow')
         .dark();
   });
+	
+
