@@ -2,6 +2,7 @@ package org.enis.benchmarkCreator;
 
 import java.util.Locale;
 
+import org.enis.benchmarkCreator.controller.RaterController;
 import org.enis.benchmarkCreator.model.Rater;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,20 +20,11 @@ public class SignUpController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/rater/sign_up", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome rater/sign_up! The client locale is {}.", locale);
-				
-		return "sign_up";
-	}
+	
 	@RequestMapping(value = "/testJSON", method = RequestMethod.GET)
 	public ModelAndView httpServicePostJSONDataExample( ModelMap model ) {
 		return new ModelAndView("sign_up");
 	}
 	
-	@RequestMapping(value = "/saverater_json", method = RequestMethod.POST)	
-	public  @ResponseBody String saveRaterJSON( @RequestBody Rater rater )   {
-		System.out.println(rater);
-		return "JSON: The rater first name: " + rater.getFirstName() + ", Email : " + rater.getEmail();
-	}
+	
 }
