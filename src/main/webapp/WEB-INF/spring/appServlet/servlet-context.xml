@@ -43,9 +43,9 @@
         </beans:property>
         <beans:property name="hibernateProperties">
             <beans:props>
-                <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
-                </beans:prop>
+                <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
                 <beans:prop key="hibernate.show_sql">true</beans:prop>
+                <beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
             </beans:props>
         </beans:property>
     </beans:bean>
@@ -57,15 +57,14 @@
     <beans:bean id="raterService" class="org.enis.benchmarkCreator.service.RaterServiceImpl">
         <beans:property name="raterDAO" ref="raterDAO"></beans:property>
     </beans:bean>
-    <context:component-scan base-package="org.enis.benchmarkCreator.controller" />
+    <context:component-scan base-package="org.enis.benchmarkCreator" />
      
     <tx:annotation-driven transaction-manager="transactionManager"/>
      
     <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
     </beans:bean>
- <context:component-scan base-package="org.enis.benchmarkCreator" />
-
+ 
 </beans:beans>
 	
 	

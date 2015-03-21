@@ -24,20 +24,28 @@ public class RaterController {
 		return "sign_up";
 	}
 
-	@RequestMapping(value = "/saverater_json", method = RequestMethod.POST)
-	public @ResponseBody String saveRaterJSON(@RequestBody Rater rater) {
-		System.out.println("heloo sign_up");
-		System.out.println(rater);
-
-		System.out.println("heloo sign_up controller");
-		return "JSON: The rater first name: " + rater.getFirstName()
-				+ ", Email : " + rater.getEmail();
-	}
-
 	@Autowired(required = true)
 	@Qualifier(value = "raterService")
 	public void setRaterService(RaterService raterService) {
 		this.raterService = raterService;
+	}
+
+	@RequestMapping(value = "/saverater_json", method = RequestMethod.POST)
+	public @ResponseBody String saveRaterJSON(@RequestBody Rater rater) {
+
+		System.out.println(rater);
+		
+		Rater rater1=new Rater();
+		rater1.setFirstName(rater.getFirstName());
+		rater1.setLastName(rater.getLastName());
+		rater1.setEmail(rater.getEmail());
+		rater1.setLogin(rater.getLogin());
+		rater1.setPassword(rater.getPassword());
+
+		this.raterService.addRater(rater1);
+
+		return "JSON: The rater first name: " + rater.getFirstName()
+				+ ", Email : " + rater.getEmail();
 	}
 
 	// For add and update person both

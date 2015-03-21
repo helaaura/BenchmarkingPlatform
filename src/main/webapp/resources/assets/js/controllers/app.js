@@ -39,7 +39,7 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
 
 .controller('SignUpCtrl',['$scope','$http', function($scope,$http) {
     $scope.user = {
-    	      email: 'email',
+    	      email: 'email@email.com',
     	      firstName: 'hela',
     	      lastName: 'meg' ,
     	      login: 'hela',
