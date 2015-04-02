@@ -25,7 +25,7 @@
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')"></md-sidenav>
         <div layout="column" flex id="content">
             <md-content layout="column" flex class="md-padding"> 
-            <form name="signUpForm" ng-controller="SignUpCtrl" ng-submit="signUpForm.$valid && submit()" novalidate>        
+            <form name="signUpForm" ng-controller="SignUpCtrl" ng-submit="signUpForm.$valid  && submit()" novalidate>        
 	            <div layout="column" layout-align="center">
 	              <div layout layout-sm="column">
 			        <md-input-container flex>

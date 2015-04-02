@@ -45,7 +45,11 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
     	      login: 'hela',
     	      password: '123',
     	      confirm_password:'123',
-    };    
+    };   
+    $scope.verifyPassword = function() {
+    	alert( "password==confirm_password" + $scope.user.password.to_s == $scope.user.confirm_password.to_s);
+    	return $scope.user.password.to_s == $scope.user.confirm_password.to_s; 
+    };
 	$scope.submit = function() {
 		var rater = {
 				firstName : $scope.user.firstName,
@@ -54,7 +58,8 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
 				login : $scope.user.login,
 				password : $scope.user.password
 		};	
-		var res = $http.post('/benchmarkCreator/saverater_json', rater);
+		raterJSON=angular.toJson(rater,true);
+		var res = $http.post('/benchmarkCreator/saverater_json', raterJSON);
 		res.success(function(data, status, headers, config) {
 			$scope.message = data;
 		});
