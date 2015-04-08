@@ -17,13 +17,13 @@
 </head>
 <body>
 	<body layout="column" ng-controller="AppCtrl">
-	<!-- <md-toolbar layout="row">
-      <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+	 <md-toolbar layout="row">
+      <!-- <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
         <span class="visually-hidden">Menu</span>
-      </button>
+      </button>-->
       <h1>{{menu}}</h1>
     </md-toolbar>
-  -->
+  
     
     
     <md-toolbar class="toolbardemoBasicUsage">

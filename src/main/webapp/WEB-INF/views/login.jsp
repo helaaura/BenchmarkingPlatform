@@ -12,6 +12,8 @@
     <script src="/benchmarkCreator/resources/assets/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/benchmarkCreator/resources/assets/bower_components/angular-material/angular-material.js"></script>
     <script src="/benchmarkCreator/resources/assets/js/controllers/app.js"></script>
+	<script src="/benchmarkCreator/resources/assets/bower_components/angular-smart-table/dist/smart-table.js" type="text/javascript"></script>
+	
 <title>login</title>
 </head>
 <body layout="column" ng-controller="AppCtrl">
